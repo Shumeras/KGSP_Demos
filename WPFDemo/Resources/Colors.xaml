@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPFDemo.Resources">
+    
+    <Color x:Key="MainColor">#97DA7E</Color>
+    <Color x:Key="AccentColor">#B289D9</Color>
+    <Color x:Key="WarnColor">#D97673</Color>
+    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+</ResourceDictionary>
