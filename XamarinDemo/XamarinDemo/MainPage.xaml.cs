@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
@@ -14,15 +16,44 @@ namespace XamarinDemo
 
     public partial class MainPage : TabbedPage
     {
-
-        public ShopingPageViewModel PageViewModel { get; set; }
+        public ShopingPageViewModel ShopingPageViewModel { get; set; }
+        public CartPageViewModel CartPageViewModel { get; set; }
 
         public MainPage()
         {
-            PageViewModel = new ShopingPageViewModel();
+            ShopingPageViewModel = new ShopingPageViewModel();
+            CartPageViewModel = new CartPageViewModel();
 
+            foreach (var si in ShopingPageViewModel.ShopItems)
+                si.PropertyChanged += UpdateCart;
+            
             InitializeComponent();
-            BindingContext = PageViewModel;
+            BindingContext = this;
+        }
+
+        private void UpdateCart(object obj, PropertyChangedEventArgs args)
+        {
+            var target = (ShopItemViewModel)obj;
+
+            if(CartPageViewModel.CartItems.Contains(target))
+            {
+                if (target.SelectedCount == 0)
+                {
+                    CartPageViewModel.CartItems.Remove(target);
+                    CartPageViewModel.BuyCommand.ChangeCanExecute();
+                    CartPageViewModel.ClearCommand.ChangeCanExecute();
+                }
+            }
+            else
+            {
+                if (target.SelectedCount > 0)
+                {
+                    CartPageViewModel.CartItems.Add(target);
+                    CartPageViewModel.BuyCommand.ChangeCanExecute();
+                    CartPageViewModel.ClearCommand.ChangeCanExecute();
+                }
+            }
+
         }
     }
 }

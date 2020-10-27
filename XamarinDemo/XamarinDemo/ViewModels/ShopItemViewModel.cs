@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using Xamarin.Forms;
 
 namespace XamarinDemo.ViewModels
 {
     public class ShopItemViewModel : INotifyPropertyChanged
     {
+        #region private fields
+
         private string id;
         private string name;
         private string description;
         private float price;
         private string imgDir;
         private int selectedCount;
+        private Command clearCommand;
+
+        #endregion
+
+        public event PropertyChangedEventHandler PropertyChanged = (o, args) => { };
 
         public string Id
         {
@@ -62,13 +70,27 @@ namespace XamarinDemo.ViewModels
         public int SelectedCount
         {
             get => selectedCount;
-            set 
+            set
             {
                 selectedCount = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("SelectedCount"));
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged = (o, args) => { };
+        public Command ClearCommand 
+        { 
+            get
+            {
+                if (clearCommand == null)
+                    clearCommand = new Command(
+                        (param) => SelectedCount = 0,
+                        (param) => SelectedCount > 0
+                    );
+
+                return clearCommand;
+            }
+                    
+        }
+
     }
 }
