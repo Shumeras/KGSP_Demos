@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hello World! 😁</h1>
+    </header>
+    
+    <main>
+        <div class="topContent">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                <defs>
+                    <mask id="mask">
+                        <circle cx="55%" cy="40%" r="40%" fill="white"></circle> 
+                    </mask>
+                </defs>
+                <image xlink:href="./img/profile.jpg" width="200" height="200" mask="url(#mask)"></image>
+            </svg>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sapiente, nemo qui blanditiis libero corrupti harum natus consequuntur sunt ipsa! Consectetur iure repellendus labore dolores fugiat adipisci, eum autem facere.</p>
+        </div>
+
+        <div class="bottomContent">
+            <div class="contentBox">
+                <h2>Project 1</h2>
+                <img src="./img/Prj1.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis impedit, nemo corporis rem ipsa iusto velit. Consectetur voluptatem, neque culpa et maiores, nostrum in rem nihil vel incidunt fuga.</p>
+                <a href="">Pasižiūrėk!</a>
+            </div>
+            <div class="contentBox">
+                <h2>Project 2</h2>
+                <img src="./img/Prj2.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus alias corrupti nulla ea laboriosam praesentium repudiandae error quos perspiciatis, doloremque illo quis non aperiam. Explicabo rerum repudiandae consequuntur impedit.</p>
+                <a href="">Pasižiūrėk!</a>
+            </div>
+            <div class="contentBox">
+                <h2>Project 1</h2>
+                <img src="./img/Prj1.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis impedit, nemo corporis rem ipsa iusto velit. Consectetur voluptatem, neque culpa et maiores, nostrum in rem nihil vel incidunt fuga.</p>
+                <a href="">Pasižiūrėk!</a>
+            </div>
+            <div class="contentBox">
+                <h2>Project 2</h2>
+                <img src="./img/Prj2.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus alias corrupti nulla ea laboriosam praesentium repudiandae error quos perspiciatis, doloremque illo quis non aperiam. Explicabo rerum repudiandae consequuntur impedit.</p>
+                <a href="">Pasižiūrėk!</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contacts">
+            <h3>Kontaktai:</h3>
+            <h4>Šarūnas Mackonis</h4>
+            <p>
+                Adresas: ------------- <br>
+                Tel. nr.: ------------- <br>
+                El. paštas: ------------- <br>
+            </p>
+        </div>
+        <div class="contactForm">
+            <h3>Palikite užklausa:</h3>
+            <form action="">
+                <div>
+                    <label for="emailBox">El. paštas:</label>
+                    <input type="email" name="email" id="emailBox">
+                </div>
+                <div>
+                    <label for="messageBox">Užklausa:</label>
+                    <textarea name="message" id="messageBox" cols="30" rows="10"></textarea>
+                </div>
+                <input type="submit" value="Siūsti žinutę">         
+            </form>
+        </div>
+    </footer>
+</body>
+</html>

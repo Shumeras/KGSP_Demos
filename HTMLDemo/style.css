@@ -1,0 +1,103 @@
+body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: lightgray;
+}
+
+header {
+    position: fixed;
+    background-color: lightsalmon;
+    width: 100%;
+    text-align: center;
+}
+
+header h1{
+    margin: 2px;
+}
+
+main{
+    padding-top: 47px;
+}
+
+.topContent{
+    background-color: aqua;
+    padding: 0 5%;
+
+    /* Children layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    /* Background image */
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.topContent p{
+    flex: 4 1 300px;
+
+    color: white;
+    
+    font-size: xx-large;
+    font-style: italic;
+    text-shadow: 3px 3px black;
+}
+
+.topContent svg{
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.bottomContent{
+    /* Children layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    background-color: antiquewhite;
+    padding: 1%;
+}
+
+.contentBox{
+    flex: 1 1 300px;
+    
+    background-color: whitesmoke;
+    width: auto;
+    margin: 1%;
+    padding: 1%;
+    box-shadow: 5px 5px gray;
+}
+
+.contentBox:hover{
+    background-color: #e0e0e0;
+}
+
+.contentBox img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+footer div{
+    flex: 1 1 300px;
+    display: block;    
+}
+
+footer div input, footer div textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+footer div label{
+    vertical-align: top;
+}
+
