@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div *ngIf="dataSaver.getEquations().length > 0; else noMemoryBlock">
+                <div *ngFor="let item of dataSaver.getEquations().reverse()">
+                    <div class="card m-1">
+                        <div class="card-body">
+                            <h3 class="text-muted">{{item}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #noMemoryBlock>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-muted">There has been no calculations yet!</h3>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

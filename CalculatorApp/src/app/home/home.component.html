@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <input class="form-control" type="text" [value]="equation" readonly>
+            <div class="row">
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('7')" >
+                        <h3>7</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('8')" >
+                        <h3>8</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('9')" >
+                        <h3>9</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('-')" >
+                        <h3>-</h3>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('4')" >
+                        <h3>4</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('5')" >
+                        <h3>5</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('6')" >
+                        <h3>6</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('+')" >
+                        <h3>+</h3>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('1')" >
+                        <h3>1</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('2')" >
+                        <h3>2</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('3')" >
+                        <h3>3</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('*')" >
+                        <h3>*</h3>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('0')" >
+                        <h3>0</h3>
+                    </button>
+                </div>
+                <div class="col-6 p-2">
+                    <button class="btn btn-block btn-info" (click)="calculate()" >
+                        <h3>=</h3>
+                    </button>
+                </div>
+                <div class="col-3 p-2">
+                    <button class="btn btn-block btn-light" (click)="addChar('/')" >
+                        <h3>/</h3>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
