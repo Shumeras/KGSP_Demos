@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Timer
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h1>{{headerTitle}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <circle-progress
+          (click)="timerClicked()"
+          [title]="timerTitle"
+          [subtitle]="timerSubtitle"
+          [percent]="timerPercent"
+          radius="100"
+        ></circle-progress>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Select interval</ion-label>
+          <ion-datetime 
+            displayFormat="mm:ss" 
+            placeholder="01:00" 
+            [(ngModel)]="datePickerValue"
+            (ionChange)="onDatePickerChanged()"
+            >
+          </ion-datetime>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="warning" expand="full" (click)="restart()">
+          Restart interval
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" expand="full" (click)="reset()">
+          Reset timer
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+  
+</ion-content>
